@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가보자GO</title>
+
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/79c63cc024.js" crossorigin="anonymous"></script>
+
+    <!-- css연결 -->
+    <link rel="stylesheet" href="../css/payment.css">
+
+    <!-- 부트스트랩아이콘 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+
+    <script>
+        $(function () { $('.header').load("header.html") });
+    </script>
+
+</head>
+
+
+<body>
+    <div class="header"></div>
+
+    <div class="title">
+        <div class="book_check">
+            <i class="bi bi-chevron-left"></i>
+            <h1>예약 확인 및 결제</h1>
+        </div>
+    </div>
+
+    <div class="main_wrapper">
+        <div class="wrap">
+
+            <h2 class="book_info">예약정보</h2>
+
+            <div class="select_room">
+                <div class="room_thum">
+                    <img src="../img/room2.jpg" alt="">
+                </div>
+
+                <div class="room_detail">
+                    <div class="room_name">숙소 이름</div>
+                    <span class="book_date">2022년 7월 21일 (금)~ <br>
+                        2022년 7월 22일 (토)</span>
+                </div>
+            </div>
+
+            <div class="room_type_box">
+                <span class="room_type">
+                    스탠다드 트윈
+                </span>
+                <span class="room_price">
+                    231,000원
+                </span>
+            </div>
+
+
+            <h2 class="point_info">포인트 사용</h2>
+
+            <div class="point">
+                <input type="text" class="point_input" placeholder="0P" />
+                <button type="button" class="point_all">
+                    전액사용
+                </button>
+            </div>
+            <div class="use_point">
+                사용가능한 포인트 
+                <div class="point_number">3000P</div> 
+            </div>
+
+            <h2 class="book_info">예약자 정보</h2>
+
+            <div class="book_person">
+                <div class="book_name">
+                    <span>예약자 이름</span>
+                    <span>조미혜</span>
+                </div>
+                <div class="book_email">
+                    <span>이메일 주소</span>
+                    <span>abc123@naver.com</span>
+                </div>
+                <div class="book_phone">
+                    <span>휴대전화 번호</span>
+                    <span>010-1234-5678</span>
+                </div>
+            </div>
+
+
+            <h2 class="payment_info">결제수단 선택</h2>
+
+            <button type="button" class="card_icon_box">
+                <i class="bi bi-credit-card"></i>
+                <div class="card">신용카드</div>
+            </button>
+
+        </div>
+
+
+        <div class="payment_section">
+            <div class="payment_green_box">
+
+                <div class="wrapper">
+                    <div class="payment_name">결제정보</div>
+
+                    <div class="green_pay">
+                        <div class="green_payment">
+                            <span>주문금액</span>
+                            <span>231,000원</span>
+                        </div>
+                        <div class="green_payment">
+                            <span>포인트 사용금액</span>
+                            <span>0P</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deep_green_box">
+
+                    <div class="wrapper">
+                        <div class="total_pay">
+                            <div>총 결제금액</div>
+                            <div>231,000원</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="payment_name">약관안내</div>
+                    <label class="terms_all">
+                        <input type="checkbox" name="all" />
+                        전체 약관 동의
+                    </label>
+                    <div class="white_box">
+                        <label>
+                            <input type="checkbox" name="terms_traveler" />
+                            <span class="btn_view_more" onclick="showTerms()">여행자 약관(필수)</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="terms_private_info" />
+                            <span class="btn_view_more">개인정보 제공 동의(필수)</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="terms_discount_info" />
+                            <span class="btn_view_more">할인혜택 안내(선택)</span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn_payment">231,000원 결제하기</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer"></div>
+    </footer>
+
+</body>
+
+<script>
+    function showTerms() {
+        alert("여행자 약관입니다.");
+    }
+</script>
+
+</html>
