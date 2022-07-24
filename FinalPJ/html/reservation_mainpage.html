@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>가보자GO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+
+  <!-- 아이콘 -->
+  <script src="https://kit.fontawesome.com/79c63cc024.js" crossorigin="anonymous"></script>
+
+  <!-- 부트스트랩 css -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <!-- 부트스트랩아이콘 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <!-- css 연결 -->
+  <link rel="stylesheet" href="../css/reservation.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+
+  <!-- 자바스크립트 -->
+  <script src="../js/reservation_main.js"></script>
+
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+
+  <script>
+    $(function () { $('.header').load("header.html") });
+  </script>
+
+</head>
+
+<body>
+  <div class="header"></div>
+
+  <!-- 메인 이미지 배너 -->
+  <div class="img_box banner">
+    <img src="../img/main_hotel.jpg" alt="" />
+  </div>
+
+  <!-- 여행지,숙소등 서치박스 -->
+  <div class="wrap">
+    <div class="select_box">
+      <div class="search_box">
+        <ul>
+          <li>
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <p class="title">여행지</p>
+              <button type="button" class="travel_btn" id="travel_btn">여행지를 선택하세요
+              </button>
+          </li>
+          <li>
+            <i class="bi bi-calendar-check"></i>
+            <div>
+              <p class="title">체크인</p>
+              <input type="date" name="spot" placeholder="체크인 날짜를 선택하세요" />
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-calendar-check"></i>
+            <div>
+              <p class="title">체크아웃</p>
+              <input type="date" name="spot" placeholder="체크아웃 날짜를 선택하세요" />
+            </div>
+          </li>
+          <li>
+            <!-- <i class="fas fa-user"></i> -->
+            <i class="bi bi-person-plus"></i>
+            <div>
+              <p class="title">인원</p>
+              <select name="person_cnt" id="person_cnt">
+                <option value="">인원을 선택하세요</option>
+                <option value="1">1명</option>
+              </select>
+              <!-- <input type="text" name="spot" placeholder="인원을 선택하세요" /> -->
+            </div>
+          </li>
+        </ul>
+        <button type="button" class="search_btn">SEARCH</button>
+      </div>
+    </div>
+
+    <div class="acco">추천숙소</div>
+
+    <div class="large_container">
+      <div class="acco_container">
+        <div class="list">
+          <div class="list_name">숙소이름</div>
+          <p>
+            <br />제주/제주시 <br />기준인원 2명 <br />240,000
+            <br />
+          </p>
+          <a href="./reservation_detail.html" class="list_reserve">예약하기</a>
+        </div>
+        <div class="hotel_picture">
+          <img src="../img/hotel.jpg" alt="" />
+          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+        </div>
+      </div>
+
+      <div class="acco_container">
+        <div class="list">
+          <div class="list_name">숙소이름</div>
+          <p>
+            <br />제주/제주시 <br />기준인원 2명 <br />240,000
+            <br />
+          </p>
+          <a href="#" class="list_reserve">예약하기</a>
+        </div>
+        <div class="hotel_picture">
+          <img src="../img/hotel.jpg" alt="" />
+          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+        </div>
+      </div>
+
+      <div class="acco_container">
+        <div class="list">
+          <div class="list_name">숙소이름</div>
+          <p>
+            <br />제주/제주시 <br />기준인원 2명 <br />240,000
+            <br />
+          </p>
+          <a href="#" class="list_reserve">예약하기</a>
+        </div>
+        <div class="hotel_picture">
+          <img src="../img/hotel.jpg" alt="" />
+          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+        </div>
+      </div>
+
+      <div class="acco_container">
+        <div class="list">
+          <div class="list_name">숙소이름</div>
+          <p>
+            <br />제주/제주시 <br />기준인원 2명 <br />240,000
+            <br />
+          </p>
+          <a href="#" class="list_reserve">예약하기</a>
+        </div>
+        <div class="hotel_picture">
+          <img src="../img/hotel.jpg" alt="" />
+          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+        </div>
+      </div>
+
+      <div class="acco_container">
+        <div class="list">
+          <div class="list_name">숙소이름</div>
+          <p>
+            <br />제주/제주시 <br />기준인원 2명 <br />240,000
+            <br />
+          </p>
+          <a href="#" class="list_reserve">예약하기</a>
+        </div>
+        <div class="hotel_picture">
+          <img src="../img/hotel.jpg" alt="" />
+          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+        </div>
+      </div>
+
+      <div class="acco_container">
+        <div class="list">
+          <div class="list_name">숙소이름</div>
+          <p>
+            <br />제주/제주시 <br />기준인원 2명 <br />240,000
+            <br />
+          </p>
+          <a href="#" class="list_reserve">예약하기</a>
+        </div>
+        <div class="hotel_picture">
+          <img src="../img/hotel.jpg" alt="" />
+          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 페이지 부트스트랩 -->
+    <div class="wrap_pagination">
+      <ul class="pagination my">
+        <li class="page-item disabled">
+          <a class="page-link" href="#">&laquo;</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">4</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">5</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">&raquo;</a>
+        </li>
+      </ul>
+    </div>
+    <!-- 페이지 부트스트랩 -->
+
+  </div>
+
+  <!-- modal test -->
+  <!-- <div class="test-modal-box" id="test-modal">
+    <div class="test-modal">
+      <div class="test-modal-header">
+        모달 제목입니다.
+      </div>
+      <div class="test-modal-body">
+        모달 내용입니다.
+      </div>
+    </div>
+  </div> -->
+  <!-- // modal test -->
+
+
+
+
+  <footer>
+    <div class="footer"></div>
+  </footer>
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <!-- modal script -->
+  <script src="../js/modal.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      addModalEvent("travel_btn", "test-modal", "test-modal");
+    });
+  </script>
+</body>
+
+</html>
