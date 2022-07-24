@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>가보자GO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- 아이콘 -->
+  <script src="https://kit.fontawesome.com/79c63cc024.js" crossorigin="anonymous"></script>
+
+  <!-- css연결 -->
+  <link rel="stylesheet" href="../css/reservation_detail.css" />
+  <link rel="stylesheet" href="../css/rating.css">
+
+  <!-- 부트스트랩아이콘 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+
+
+  <!-- 헤더 html가져오기 -->
+  <script>
+    $(function () { $('.header').load("header.html") });
+  </script>
+
+</head>
+
+<body>
+  <div class="header"></div>
+
+  <div class="header_box">
+    <img src="../img/banner_room.jpg" alt="" />
+  </div>
+
+  <div class="wrap">
+    <div class="select_box">
+      <div class="acco_name">숙소 이름</div>
+      <div class="small_search_box">
+        <ul>
+          <li>
+            <!-- <i class="fas fa-calendar-check"></i> -->
+            <i class="bi bi-calendar-check"></i>
+            <div>
+              <p class="title">체크인</p>
+              <input type="text" name="spot" placeholder="체크인 날짜를 선택하세요" />
+            </div>
+          </li>
+          <li>
+            <!-- <i class="fas fa-calendar-check"></i> -->
+            <i class="bi bi-calendar-check"></i>
+            <div>
+              <p class="title">체크아웃</p>
+              <input type="text" name="spot" placeholder="체크아웃 날짜를 선택하세요" />
+            </div>
+          </li>
+          <li>
+            <!-- <i class="fas fa-user"></i> -->
+            <i class="bi bi-person-plus"></i>
+            <div>
+              <p class="title">인원</p>
+              <input type="text" name="spot" placeholder="인원을 선택하세요" />
+            </div>
+          </li>
+        </ul>
+
+        <i class="fab fa-sistrix search"></i>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="green_box">
+    <div class="wrap">
+
+      <div class="acco_rooms">ROOMS</div>
+
+      <div class="room_card_box">
+        <div class="room_card">
+          <div class="img_box">
+            <img src="../img/detail1.jpg" alt="">
+          </div>
+          <div class="room_type">스탠다드 트윈</div>
+          <div class="room_price">₩200,000</div>
+          <a href="../html/payment.html" class="book_btn">예약하기</a>
+
+
+        </div>
+
+        <div class="room_card">
+          <div class="img_box">
+            <img src="../img/detail1.jpg" alt="">
+          </div>
+          <div class="room_type">스탠다드 트윈</div>
+          <div class="room_price">₩200,000</div>
+          <a href="../html/payment.html" class="book_btn">예약하기</a>
+        </div>
+      </div>
+
+      <span class="arrow_icon">
+        <i class="bi bi-arrow-left-square"></i>
+        <i class="bi bi-arrow-right-square"></i>
+      </span>
+
+    </div>
+  </div>
+
+
+
+
+  <div class="wrap">
+
+    <div class="info_detail">
+      <div class="info_exp">
+        <div class="info_exp_left">
+          <i>ROOM INFORMATION</i>
+          <h4>저지맨션</h4>
+          <span>저지맨션은 거실과 다이닝룸 그리고 침실과 화장실, 야외 테라스로 구성되어 있습니다.</span>
+        </div>
+        <div>
+          <p>체크인 16:00 / 체크아웃 11:00</p>
+          <p>기준 인원 2명 (최대 인원 2명)</p>
+          <p>객실면적 82㎡</p>
+          <p>킹 침대 1</p>
+        </div>
+      </div>
+
+      <div class="info_img">
+        <img src="../img/room1.jpg" alt="">
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101182.64197414236!2d126.83696531640624!3d37.57961700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2c74aeddea1%3A0x8b3046532cc715f6!2z6rK967O16raB!5e0!3m2!1sko!2skr!4v1658074137356!5m2!1sko!2skr"
+      width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <div class="map_location">
+    <div class="">
+      <i class="bi bi-geo-alt-fill"></i>
+      <div class="location_info">
+        <span>위치안내</span>
+        <div>Kigamboni , Dar es salaam, Tanzania
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="wrap">
+    <div class="acco_review">후기</div>
+  </div>
+
+  <div class="gray_box">
+
+
+    <div class="wrap">
+      <div class="avg_box">
+
+        <div class="top_review">
+          <span>4.0</span>
+          <div class="avg_star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+        </div>
+
+        <div class="progress_box">
+          <div class="avg_star_bar">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <div class="progress_bar"><span></span></div>10명
+          </div>
+
+          <div class="avg_star_bar">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <div class="progress_bar"><span></span></div>7명
+          </div>
+
+          <div class="avg_star_bar">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <div class="progress_bar"><span></span></div>5명
+          </div>
+
+          <div class="avg_star_bar">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <div class="progress_bar"><span></span></div>3명
+          </div>
+
+          <div class="avg_star_bar">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <div class="progress_bar"><span></span></div>1명
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <div class="reviews">
+        <div class="star_box">
+          <div class="star_name">Jhone Lown</div>
+          <p class="star_review">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+          </p>
+        </div>
+        <div class="star_box">
+          <div class="star_name">jenny choi</div>
+          <p class="star_review">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </p>
+        </div>
+        <div class="star_box">
+          <div class="star_name">lisa stark</div>
+          <p class="star_review">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer"></div>
+  </footer>
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
