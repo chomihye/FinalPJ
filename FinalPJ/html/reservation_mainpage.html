@@ -13,49 +13,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
     rel="stylesheet" />
 
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
-
-  <!-- 아이콘 -->
-  <script src="https://kit.fontawesome.com/79c63cc024.js" crossorigin="anonymous"></script>
-
-  <!-- 부트스트랩 css -->
-  <!-- CSS only -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
-
   <!-- 부트스트랩아이콘 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+  <!-- 부트스트랩  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
   <!-- css 연결 -->
+  <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/reservation.css" />
   <link rel="stylesheet" href="../css/header.css" />
 
-  <!-- 자바스크립트 -->
-  <script src="../js/reservation_main.js"></script>
 
   <!-- 제이쿼리 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
 
-  <script>
-    $(function () {
-
-      $('.header').load("header.html");
-      $('.footer').load("footer.html");
-
-
-        $(".heart_icon").click(function () {
-        $("#doubleCheckSucceedModal").css({ display: "block" });
-      });
-      // 이메일 인증 버튼 클릭 시 이메일 인증 모달창 나타남(display: none → block)
-
-      $(".okBtn").click(function () {
-        $("#doubleCheckSucceedModal").css({ display: "none" });
-      }); // 이메일 인증 모달창에서 확인 버튼 클릭 시 모달창 사라짐(display: block → none)
-
-    });
-  </script>
+  <!-- 자바스크립트 -->
+  <script src="../js/reservation_main.js"></script>
 
 </head>
 
@@ -63,8 +40,31 @@
   <div class="header"></div>
 
   <!-- 메인 이미지 배너 -->
-  <div class="img_box banner">
+  <!-- <div class="img_box banner">
     <img src="../img/main_hotel.jpg" alt="" />
+  </div> -->
+
+  <!--   메인이미지 슬라이드 부트스트랩 -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="../img/main_hotel.jpg" width="100%" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="../img/hotel.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="../img/room2.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
   <!-- 여행지,숙소등 서치박스 -->
@@ -78,12 +78,13 @@
               <p class="title">여행지</p>
               <button type="button" class="travel_btn" id="travel_btn">여행지를 선택하세요
               </button>
+            </div>
           </li>
           <li>
             <i class="bi bi-calendar-check"></i>
             <div>
               <p class="title">체크인</p>
-              <input type="date" name="spot" placeholder="체크인 날짜를 선택하세요" />
+              <input type="date" class="" name="spot" placeholder="체크인 날짜를 선택하세요" />
             </div>
           </li>
           <li>
@@ -98,11 +99,7 @@
             <i class="bi bi-person-plus"></i>
             <div>
               <p class="title">인원</p>
-              <select name="person_cnt" id="person_cnt">
-                <option value="">인원을 선택하세요</option>
-                <option value="1">1명</option>
-              </select>
-              <!-- <input type="text" name="spot" placeholder="인원을 선택하세요" /> -->
+              <button type="button" class="person_btn" id="person_btn">인원을 선택하세요</button>
             </div>
           </li>
         </ul>
@@ -116,7 +113,8 @@
     <div class="large_container">
       <div class="acco_container">
         <div class="list">
-          <div class="list_name">숙소이름</div>
+          <a href="./reservation_detail.html" class="list_main_name">숙소이름</a>
+          <!-- <div class="list_name">숙소이름</div> -->
           <p>
             <br />제주/제주시 <br />기준인원 2명 <br />240,000
             <br />
@@ -131,7 +129,7 @@
 
       <div class="acco_container">
         <div class="list">
-          <div class="list_name">숙소이름</div>
+          <a href="./reservation_detail.html" class="list_main_name">숙소이름</a>
           <p>
             <br />제주/제주시 <br />기준인원 2명 <br />240,000
             <br />
@@ -140,13 +138,13 @@
         </div>
         <div class="hotel_picture">
           <img src="../img/hotel.jpg" alt="" />
-          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+          <div class="heart_icon"><i class="bi bi-heart-fill"></i></div>
         </div>
       </div>
 
       <div class="acco_container">
         <div class="list">
-          <div class="list_name">숙소이름</div>
+          <a href="./reservation_detail.html" class="list_main_name">숙소이름</a>
           <p>
             <br />제주/제주시 <br />기준인원 2명 <br />240,000
             <br />
@@ -155,13 +153,13 @@
         </div>
         <div class="hotel_picture">
           <img src="../img/hotel.jpg" alt="" />
-          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+          <div class="heart_icon"><i class="bi bi-heart-fill"></i></div>
         </div>
       </div>
 
       <div class="acco_container">
         <div class="list">
-          <div class="list_name">숙소이름</div>
+          <a href="./reservation_detail.html" class="list_main_name">숙소이름</a>
           <p>
             <br />제주/제주시 <br />기준인원 2명 <br />240,000
             <br />
@@ -170,13 +168,13 @@
         </div>
         <div class="hotel_picture">
           <img src="../img/hotel.jpg" alt="" />
-          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+          <div class="heart_icon"><i class="bi bi-heart-fill"></i></div>
         </div>
       </div>
 
       <div class="acco_container">
         <div class="list">
-          <div class="list_name">숙소이름</div>
+          <a href="./reservation_detail.html" class="list_main_name">숙소이름</a>
           <p>
             <br />제주/제주시 <br />기준인원 2명 <br />240,000
             <br />
@@ -185,13 +183,13 @@
         </div>
         <div class="hotel_picture">
           <img src="../img/hotel.jpg" alt="" />
-          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+          <div class="heart_icon"><i class="bi bi-heart-fill"></i></div>
         </div>
       </div>
 
       <div class="acco_container">
         <div class="list">
-          <div class="list_name">숙소이름</div>
+          <a href="./reservation_detail.html" class="list_main_name">숙소이름</a>
           <p>
             <br />제주/제주시 <br />기준인원 2명 <br />240,000
             <br />
@@ -200,7 +198,7 @@
         </div>
         <div class="hotel_picture">
           <img src="../img/hotel.jpg" alt="" />
-          <div class="heart_icon"><i class="fas fa-heart"></i></div>
+          <div class="heart_icon"><i class="bi bi-heart-fill"></i></div>
         </div>
       </div>
     </div>
@@ -237,10 +235,112 @@
 
       <div class="wish_btn">
         <a href="javascript:void(0);" class="check_wishlist">위시리스트 확인</a>
-        <div class="okBtn">확인</div>
+        <div class="okBtn">닫기</div>
       </div>
     </div>
   </div>
+
+  <!-- 여행지 선택 모달 -->
+  <div class="modal" id="locationModal">
+    <div class="modal_Content">
+      <h3><i class="bi bi-geo-alt"></i>여행지를 선택하세요</h3>
+      <!-- <div class="location_list"> -->
+      <ul class="location_list" id="location_list">
+        <li>
+          <button type="button">서울</button>
+        </li>
+        <li>
+          <button type="button">인천</button>
+        </li>
+        <li>
+          <button type="button">대전</button>
+        </li>
+        <li>
+          <button type="button">대구</button>
+        </li>
+        <li>
+          <button type="button">광주</button>
+        </li>
+        <li>
+          <button type="button">부산</button>
+        </li>
+        <li>
+          <button type="button">울산</button>
+        </li>
+        <li>
+          <button type="button">경기</button>
+        </li>
+        <li>
+          <button type="button">강원</button>
+        </li>
+        <li>
+          <button type="button">충북</button>
+        </li>
+        <li>
+          <button type="button">충남</button>
+        </li>
+        <li>
+          <button type="button">경북</button>
+        </li>
+        <li>
+          <button type="button">경남</button>
+        </li>
+        <li>
+          <button type="button">전북</button>
+        </li>
+        <li>
+          <button type="button">전남</button>
+        </li>
+        <li>
+          <button type="button">제주</button>
+        </li>
+
+      </ul>
+      <!-- </div> -->
+      <div class="location_select_wrap">
+        <div class="location_cancel">취소</div>
+        <div class="location_select">선택완료</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="personModal">
+    <div class="modal_content_people">
+      <h3><i class="bi bi-person-plus"></i>인원을 선택하세요</h3>
+
+
+      <div class="person_btn_wrap">
+
+        <div class="adult_btn">
+          성인
+
+          <button type="button" class="minus" onclick="decrease('adult_count')">-</button>
+          <span class="setting_number" id="adult_count">0</span>
+          <!-- <input type="text" class="number_input" id="a" value="2"> -->
+          <button type="button" class="plus" onclick="increase('adult_count')">+</button>
+
+        </div>
+
+        <div class="child_btn">
+          유아
+          <button type="button" class="minus" onclick="decrease('child_count')">-</button>
+          <!-- <input type="text" class="number_input"> -->
+          <span class="setting_number" id="child_count">0</span>
+          <button type="button" class="plus" onclick="increase('child_count')">+</button>
+        </div>
+      </div>
+
+      <div class="person_apply_btn">
+        <div class="cancel_btn">취소</div>
+        <div class="okBtn">적용하기</div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div></div>
 
 
   <footer>
@@ -254,13 +354,16 @@
     crossorigin="anonymous"></script>
 
   <!-- modal script -->
-  <script src="../js/modal.js"></script>
+  <!-- <script src="../js/modal.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       addModalEvent("travel_btn", "test-modal", "test-modal");
     });
-  </script>
+  </script> -->
+
+  <!-- <script src="../js/reservation_main.js"></script> -->
+
 </body>
 
 </html>
